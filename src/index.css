@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --font-primary: 'NATRON', sans-serif;
+  --font-secondary: 'Oswald', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f5ead6;
+}
