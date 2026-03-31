@@ -13,15 +13,17 @@
 }
 
 :root {
+  width: 100%;
   --font-primary: 'NATRON', sans-serif;
   --font-secondary: 'Oswald', sans-serif;
 }
 
 body {
+  width: 100%;
   margin: 0;
   background-color: #f5ead6;
   font-family: var(--font-primary);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 &::-webkit-scrollbar{
   display: none;

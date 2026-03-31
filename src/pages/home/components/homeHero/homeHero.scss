@@ -1,0 +1,95 @@
+.HomeHero {
+  background-color: rgb(215, 215, 38);
+  // background-color: #d80303;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 120vh;
+  margin-top: 10vh;
+  position: relative;
+  flex-direction: column;
+  gap: 10vw;
+  width: 100%;
+
+  .background {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    gap: 3vw;
+
+    .title {
+      color: #d80303;
+      text-align: center;
+      font-family: var(--font-primary);
+      font-size: 10.416666vw;
+
+      font-style: normal;
+      font-weight: 500;
+      line-height: 84%; /* 168px */
+      //   -webkit-text-stroke-color: #efa317;
+      //     -webkit-text-stroke-width: 5px;
+    }
+
+    .subTitle {
+      color: #111;
+      text-align: center;
+      font-family: var(--font-secondary);
+      font-size: 2vw;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 94.492%; /* 37.797px */
+    }
+
+    .button {
+      padding: 1vw 2vw;
+      border-radius: 3vw;
+      border: 3px solid #d80303;
+      background: #f5ead6;
+      color: #d80303;
+      text-align: center;
+      font-family: var(--font-secondary);
+      font-size: 2vw;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 94.492%; /* 18.898px */
+      text-transform: uppercase;
+    }
+
+}
+.strip {
+  overflow: hidden;
+  white-space: nowrap;
+  background: #5f8d00;
+  padding: 1.4vw 0;
+  width: 100%;
+
+  .track {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollText 120s linear infinite;
+  }
+
+  .text {
+    display: inline-block;
+    margin-right: 1vw;
+    color: #f5ead6;
+    font-family: var(--font-primary);
+    font-size: 3.33333vw;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+}

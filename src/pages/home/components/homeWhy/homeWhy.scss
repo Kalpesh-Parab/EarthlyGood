@@ -1,0 +1,114 @@
+.HomeWhy {
+  height: 200vh;
+  position: relative;
+
+  .shape {
+    position: absolute;
+    top: -100vh;
+  }
+
+  //   .shape2 {
+  //     position: absolute;
+  //     top: 100vh;
+  //   }
+  .mcut2 {
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    top: -30vh;
+    width: 20vw;
+  }
+  .mcut3 {
+    width: 20vw;
+    z-index: 3;
+    position: absolute;
+    right: 0;
+    top: -30vh;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    position: relative;
+    z-index: 3;
+    padding: 7vw 1vw;
+
+    .title {
+      color: #f5ead6;
+      text-align: center;
+      font-family: var(--font-primary);
+      font-size: 6.6667vw;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 84%; /* 107.52px */
+      text-transform: uppercase;
+    }
+
+    .desc {
+      color: #fff;
+      text-align: center;
+      font-family: var(--font-secondary);
+      font-size: 2.08333vw;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 94.492%; /* 37.797px */
+    }
+
+    .cards {
+      height: 70vh;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      gap: 1vw;
+      margin-top: 5vw;
+
+      .card {
+        border-radius: 10px;
+        border: 5px solid #f5ead6;
+        background: #fff;
+        padding: 2vw;
+        width: 23%;
+        height: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+
+        .number {
+          color: #d80303;
+          font-family: var(--font-primary);
+          font-size: 18.0208vw;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 84%; /* 290.925px */
+          text-transform: uppercase;
+        }
+
+        h3 {
+          margin: 0;
+          color: #d80303;
+          text-align: center;
+          font-family: var(--font-primary);
+          font-size: 3.3vw;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 84%; /* 53.76px */
+          text-transform: uppercase;
+        }
+
+        p {
+          color: #111;
+          text-align: center;
+          font-family: var(--font-secondary);
+          font-size: 1.25vw;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 94.492%; /* 37.797px */
+        }
+      }
+    }
+  }
+}

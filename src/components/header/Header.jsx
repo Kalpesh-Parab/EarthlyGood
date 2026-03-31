@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import './header.scss';
 import logo from '../../assets/logo.png';
 import search from '../../assets/search.svg';
@@ -7,6 +8,9 @@ const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Products', path: '/products' },
@@ -15,8 +19,28 @@ const Header = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // scrolling down
+        setShowHeader(false);
+      } else {
+        // scrolling up
+        setShowHeader(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <div className='Header'>
+    <div className={`Header ${showHeader ? 'show' : 'hide'}`}>
       <div className='container'>
         <div className='headerLeft'>
           <div className='logo' onClick={() => navigate('/')}>
