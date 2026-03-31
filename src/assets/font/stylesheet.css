@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'NATRON';
+    src: url('NATRON-Medium.eot');
+    src: local('NATRON Medium'), local('NATRON-Medium'),
+        url('NATRON-Medium.eot?#iefix') format('embedded-opentype'),
+        url('NATRON-Medium.woff2') format('woff2'),
+        url('NATRON-Medium.woff') format('woff'),
+        url('NATRON-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NATRON';
+    src: url('NATRON-Bold.eot');
+    src: local('NATRON Bold'), local('NATRON-Bold'),
+        url('NATRON-Bold.eot?#iefix') format('embedded-opentype'),
+        url('NATRON-Bold.woff2') format('woff2'),
+        url('NATRON-Bold.woff') format('woff'),
+        url('NATRON-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NATRON';
+    src: url('NATRON-Pictograms.eot');
+    src: local('NATRON Pictograms'), local('NATRON-Pictograms'),
+        url('NATRON-Pictograms.eot?#iefix') format('embedded-opentype'),
+        url('NATRON-Pictograms.woff2') format('woff2'),
+        url('NATRON-Pictograms.woff') format('woff'),
+        url('NATRON-Pictograms.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

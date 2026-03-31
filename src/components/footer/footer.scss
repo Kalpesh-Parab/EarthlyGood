@@ -1,0 +1,187 @@
+.Footer {
+  display: flex;
+  flex-direction: column;
+  background: #d80303;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .makhana {
+    color: #f5ead6;
+    position: absolute;
+    z-index: 2;
+    width: 15vw;
+    top: -35%;
+    right: -1%;
+  }
+  .strip {
+    overflow: hidden;
+    white-space: nowrap;
+    background: #5f8d00;
+    padding: 1.4vw 0;
+
+    .track {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scrollText 120s linear infinite;
+    }
+
+    .text {
+      display: inline-block;
+      margin-right: 1vw;
+      color: #f5ead6;
+      font-family: var(--font-primary);
+      font-size: 3.33333vw;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    width: 100%;
+    align-items: center;
+    padding: 1.4vw 4vw;
+    height: 100%;
+
+    .bigLogo {
+      width: 30%;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+
+    .midFooter {
+      padding-left: 2vw;
+      display: flex;
+      flex-direction: column;
+      gap: 2vw;
+      width: 60%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+
+      .pre {
+        color: #f5ead6;
+        font-family: var(--font-secondary);
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 108%; /* 43.2px */
+        text-transform: uppercase;
+      }
+      .newsletter {
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        width: 100%;
+        color: #f5ead6;
+        font-family: var(--font-secondary);
+        font-size: 1.25vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 108%; /* 25.92px */
+        text-transform: uppercase;
+
+        .input {
+          width: 100%;
+          display: flex;
+          height: 4.84375vw;
+          box-shadow: -7px 7px 0px 0px #000;
+
+          input {
+            width: 80%;
+            border: none;
+            outline: none;
+            background: #f5ead6;
+            width: 100%;
+            font-family: var(--font-secondary);
+            font-size: 1.1vw;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #a78f63;
+            padding: 1vw 2vw;
+
+            &::placeholder {
+              color: #a78f63;
+              opacity: 1;
+            }
+          }
+          button {
+            width: 40%;
+            background: #8b0811;
+            color: #fff;
+            font-family: var(--font-secondary);
+            padding: 1vw 2vw;
+            font-size: 1.5vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 84%; /* 26.88px */
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .copy {
+        color: #f5ead6;
+        font-family: var(--font-secondary);
+        font-size: 1.25vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 108%; /* 25.92px */
+        text-transform: uppercase;
+      }
+    }
+
+    .linksFooter {
+      padding-left: 6vw;
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      color: #f5ead6;
+      font-family: var(--font-secondary);
+      font-size: 1.875vw;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 108%; /* 38.88px */
+      text-transform: uppercase;
+      gap: 2vw;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+
+        li {
+          margin: 0;
+          padding: 0;
+          text-decoration: underline;
+          cursor: pointer;
+          &:hover{
+              text-decoration: none;
+              color: black;
+              font-weight: 800;
+          }
+        }
+
+      }
+    }
+  }
+
+  @keyframes scrollText {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
