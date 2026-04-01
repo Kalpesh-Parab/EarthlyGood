@@ -10,17 +10,17 @@
   transition: transform 0.4s ease;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.022);
-  
+
   &.hide {
     transform: translateY(-100%);
   }
-  
+
   &.show {
     transform: translateY(0);
   }
-  
+
   .container {
-    border-radius: .5vw;
+    border-radius: 0.5vw;
     width: 100%;
     background-color: #fff;
     height: 5.7812vw;
@@ -67,6 +67,13 @@
             background: #d80303;
             color: #fff;
             box-shadow: -5px 5px 0px 0px #000;
+          }
+
+          &:hover {
+            background: #d80303;
+            color: #fff;
+            box-shadow: -3px 3px 0px 0px #000;
+            transform: translateX(-2px) translateY(2px);
           }
         }
       }
