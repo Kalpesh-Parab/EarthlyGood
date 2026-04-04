@@ -1,0 +1,139 @@
+.HomeFAQ {
+  display: flex;
+  width: 100%;
+  padding: 4vw 0;
+  position: relative;
+
+  .shape,
+  .mcut4,
+  .mcut5 {
+    position: absolute;
+  }
+
+  .shape{
+    top: -48%;
+  }
+
+  .mcut4 {
+    top: -22%;
+    left: 0;
+    width: 19vw;
+    z-index: 3;
+  }
+  .mcut5 {
+    z-index: 3;
+    top: -39%;
+    right: 0;
+    width: 19vw;
+  }
+
+  .left {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4vw 6vw;
+    gap: 3.7vw;
+    width: 50%;
+    background: #cc993d;
+
+    .title {
+      color: #f5ead6;
+      font-family: var(--font-primary);
+      font-size: 5vw;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 84%; /* 80.64px */
+      text-transform: uppercase;
+    }
+
+    .faqList {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8vw;
+    }
+
+    .faqItem {
+      background: #f5ead6;
+      padding: 1.2vw;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: -6px 6px 0px #000;
+
+      .questionRow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .question {
+        color: #000;
+        font-family: var(--font-secondary);
+        font-size: 1.6vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 84%; /* 26.88px */
+        text-transform: uppercase;
+      }
+
+      .icon {
+        font-family:
+          'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #fff;
+        background-color: #000;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2vw;
+        aspect-ratio: 1;
+        font-size: 1.5vw;
+        font-weight: 300;
+        transition: transform 0.5s ease;
+      }
+
+      .icon.rotate {
+        transform: rotate(135deg); // + becomes ×
+      }
+
+      .answer {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.4s ease;
+        font-size: 1vw;
+        margin-top: 0;
+      }
+
+      &.active {
+        .answer {
+          color: #000;
+          font-family: var(--font-secondary);
+          font-size: 1.1vw;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal; /* 26.88px */
+          text-transform: uppercase;
+          max-height: max-content;
+          opacity: 1;
+          margin-top: 0.8vw;
+        }
+      }
+    }
+  }
+
+  .right {
+    position: relative;
+    z-index: 3;
+    width: 50%;
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 100vh;
+    }
+  }
+}

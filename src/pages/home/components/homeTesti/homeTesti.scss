@@ -1,0 +1,128 @@
+.HomeTesti {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4vw 0;
+  background: #f5ead6;
+  gap: 1.5vw;
+
+  .title {
+    width: 70%;
+    color: #d80303;
+    text-align: center;
+    font-family: var(--font-primary);
+    font-size: 6.66667vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 84%; /* 107.52px */
+    text-transform: uppercase;
+  }
+
+  .desc {
+    color: #111;
+    text-align: center;
+    font-family: var(--font-secondary);
+    font-size: 1.93333vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 94.492%; /* 37.797px */
+  }
+
+  .testimonials {
+    width: 100%;
+    display: flex;
+    padding: 3vw 2.5vw;
+    justify-content: flex-start;
+    gap: 2vw;
+    margin-top: 2vw;
+    overflow: scroll;
+    position: relative;
+    z-index: 3;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .testimonial {
+      box-shadow: -10px 10px 0px #a78f63;
+      flex: none;
+      width: 55vw;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1vw;
+      padding: 1vw 1vw 2.1vw 3.2vw;
+
+      .testTop {
+        display: flex;
+        justify-content: space-between;
+
+        .testTopLeft {
+          display: flex;
+          flex-direction: column;
+          padding: 2vw 0;
+          gap: 3vw;
+
+          .name,
+          .location {
+            color: #d80303;
+            font-family: var(--font-primary);
+            font-size: 5vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 86%; /* 82.56px */
+            text-transform: uppercase;
+          }
+        }
+
+        .testTopRight {
+          width: 35%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            aspect-ratio: 1/1;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      .review {
+        color: #000;
+        font-family: var(--font-secondary);
+        font-size: 1.6vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 112%; /* 40.32px */
+      }
+    }
+  }
+  .tright {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    gap: 2vw;
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: auto;
+      width: 5.5vw;
+      aspect-ratio: 1;
+      background: #d80303;
+      box-shadow: -7px 7px 0px #000;
+      cursor: pointer;
+
+      &:hover {
+        color: #fff;
+        transform: translateX(-5px) translateY(5px);
+        box-shadow: -2px 2px 2px 2px #000;
+      }
+    }
+  }
+}

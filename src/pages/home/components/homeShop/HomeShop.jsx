@@ -1,4 +1,5 @@
 import './homeShop.scss';
+import { useRef } from 'react';
 import s1 from '../../../../assets/s1.png';
 import s2 from '../../../../assets/s2.png';
 import s3 from '../../../../assets/s3.png';
@@ -46,7 +47,68 @@ const HomeShop = () => {
       rating: 5,
       reviews: 78,
     },
+    {
+      photo: s1,
+      name: '100GM MAKHANA PACKAGE - pack of 1',
+      price: '₹ 200',
+      strikedPrice: '₹ 300',
+      rating: 5,
+      reviews: 78,
+    },
+    {
+      photo: s2,
+      name: '100GM MAKHANA PACKAGE - pack of 1',
+      price: '₹ 200',
+      strikedPrice: '₹ 300',
+      rating: 5,
+      reviews: 78,
+    },
+    {
+      photo: s3,
+      name: '100GM MAKHANA PACKAGE - pack of 1',
+      price: '₹ 200',
+      strikedPrice: '₹ 300',
+      rating: 5,
+      reviews: 78,
+    },
+    {
+      photo: s4,
+      name: '100GM MAKHANA PACKAGE - pack of 1',
+      price: '₹ 200',
+      strikedPrice: '₹ 300',
+      rating: 5,
+      reviews: 78,
+    },
+    {
+      photo: s1,
+      name: '100GM MAKHANA PACKAGE - pack of 1',
+      price: '₹ 200',
+      strikedPrice: '₹ 300',
+      rating: 5,
+      reviews: 78,
+    },
   ];
+
+  const cardsRef = useRef(null);
+
+const handleNext = () => {
+  if (cardsRef.current) {
+    cardsRef.current.scrollBy({
+      left: cardsRef.current.offsetWidth * 0.3,
+      behavior: 'smooth',
+    });
+  }
+};
+
+const handlePrev = () => {
+  if (cardsRef.current) {
+    cardsRef.current.scrollBy({
+      left: -cardsRef.current.offsetWidth * .3,
+      behavior: 'smooth',
+    });
+  }
+  };
+  
   const navigate = useNavigate();
   return (
     <section className='HomeShop'>
@@ -73,7 +135,7 @@ const HomeShop = () => {
             </div>
           </div>
           <div className='tright'>
-            <div className='button'>
+            <div className='button' onClick={handlePrev}>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 width='35'
@@ -87,7 +149,7 @@ const HomeShop = () => {
                 />
               </svg>
             </div>
-            <div className='button'>
+            <div className='button' onClick={handleNext}>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 width='35'
@@ -103,7 +165,7 @@ const HomeShop = () => {
             </div>
           </div>
         </div>
-        <div className='products'>
+          <div className='products' ref={cardsRef}>
           {data.map((item, index) => (
             <div className='product' key={index}>
               <img src={item.photo} alt='' />

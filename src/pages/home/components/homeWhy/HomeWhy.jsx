@@ -1,6 +1,7 @@
 import './homeWhy.scss';
 import mcut2 from '../../../../assets/mcut2.png';
 import mcut3 from '../../../../assets/mcut3.png';
+
 const HomeWhy = () => {
   const data = [
     {
