@@ -1,0 +1,86 @@
+.ProductCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1vw;
+  border-radius: 0.4vw;
+  border: 2.579px solid #d80303;
+  background: #f5ead6;
+  gap: 1.3vw;
+  width: 23.4375vw;
+
+  img{
+    width: 100%;
+    object-fit: cover;
+
+  }
+  h3 {
+    color: #000;
+    text-align: center;
+    font-family: var(--font-primary);
+    font-size: 2.1vw;
+    width: 60%;
+    margin: 0;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 94.492%; /* 38.986px */
+    text-transform: uppercase;
+  }
+
+  .price {
+    color: #000;
+    text-align: center;
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 94.492%; /* 32.488px */
+    text-transform: uppercase;
+
+    .current {
+      font-size: 1.7vw;
+    }
+
+    .original {
+      font-size: 1.04vw;
+      text-decoration-line: line-through;
+    }
+  }
+
+  p {
+    border: 2.5px solid #d80303;
+    width: 100%;
+    margin: 0;
+    border-radius: 03vw;
+    padding: 0.5vw;
+    color: #d80303;
+    text-align: center;
+    font-family: var(--font-secondary);
+    font-size: 1.04vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 94.492%; /* 16.244px */
+    text-transform: uppercase;
+  }
+
+  button {
+    color: #fff;
+    text-align: center;
+    font-family: var(--font-secondary);
+    font-size: 1.7vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 94.492%; /* 32.488px */
+    text-transform: uppercase;
+    background: #d80303;
+    padding: 0.7vw;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: -5px 5px 0px 0px #000;
+    &:hover {
+      transform: translateX(-5px) translateY(5px);
+      box-shadow: -2px 2px 2px 2px #000;
+    }
+  }
+}

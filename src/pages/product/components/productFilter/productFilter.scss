@@ -1,0 +1,36 @@
+.ProductFilter {
+  button {
+    background-color: #d80303;
+    box-shadow: -5px 5px 0px 0px #000;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    transform: translateX(-5px) translateY(5px);
+    box-shadow: -2px 2px 2px 2px #000;
+  }
+
+  .filterDropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    right: 4.375vw;
+    margin-top: 1vw;
+    gap: 0.5vw;
+
+    .filterItem {
+      font-size: 2vw;
+
+      &.active {
+        text-decoration: underline;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+  }
+}

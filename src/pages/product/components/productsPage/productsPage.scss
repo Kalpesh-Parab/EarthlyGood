@@ -1,0 +1,34 @@
+.ProductsPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 4.375vw;
+
+  .productsHeader {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+
+    h1 {
+        flex: 1;
+      color: #d80303;
+      text-align: center;
+      font-family: var(--font-primary);
+      font-size: 6.6667vw;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 84%; /* 107.52px */
+      text-transform: uppercase;
+    }
+  }
+
+  .productsContent{
+    display: flex;
+    flex-direction: column;
+    gap: 4.375vw;
+    width: 100%;
+  }
+}
