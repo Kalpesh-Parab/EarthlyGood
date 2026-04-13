@@ -31,31 +31,37 @@ const ProductsPage = () => {
       {/* 🔹 Content */}
       <div className='productsContent'>
         {/* ✅ DEFAULT VIEW → GROUPED */}
-        {selectedCategory === 'all' ? (
-          categories.map((cat) => {
-            const categoryProducts = products.filter(
-              (p) => p.category === cat.id,
-            );
+        {selectedCategory === 'all'
+          ? categories.map((cat) => {
+              const categoryProducts = products.filter(
+                (p) => p.category === cat.id,
+              );
 
-            if (categoryProducts.length === 0) return null;
+              if (categoryProducts.length === 0) return null;
 
-            return (
-              <ProductSection
-                key={cat.id}
-                title={cat.title}
-                subtitle={cat.subtitle}
-                products={categoryProducts}
-              />
-            );
-          })
-        ) : (
-          /* ✅ FILTERED VIEW → FLAT GRID */
-          <div className='productsGrid'>
-            {filteredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        )}
+              return (
+                <ProductSection
+                  key={cat.id}
+                  title={cat.title}
+                  subtitle={cat.subtitle}
+                  products={categoryProducts}
+                />
+              );
+            })
+          : (() => {
+              const selectedCat = categories.find(
+                (cat) => cat.id === selectedCategory,
+              );
+
+              return (
+                <ProductSection
+                  key={selectedCategory}
+                  title={selectedCat?.title}
+                  subtitle={selectedCat?.subtitle}
+                  products={filteredProducts}
+                />
+              );
+            })()}
       </div>
     </div>
   );
