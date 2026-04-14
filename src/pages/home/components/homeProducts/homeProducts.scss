@@ -30,6 +30,11 @@
       font-weight: 500;
       line-height: 94.492%; /* 37.797px */
       text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    :hover{
+      text-decoration: underline;
     }
   }
 

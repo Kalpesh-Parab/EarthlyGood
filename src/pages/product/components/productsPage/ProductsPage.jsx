@@ -1,15 +1,20 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { products, categories } from '../../../../data/products';
+
 import ProductFilter from '../productFilter/ProductFilter';
-import ProductCard from '../productCard/ProductCard';
 import ProductSection from '../productSection/ProductSection';
 
 import './productsPage.scss';
 
 const ProductsPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const location = useLocation();
 
-  // Filtered products (used only when category is selected)
+  // 🔥 Get category from navigation
+  const initialCategory = location.state?.category || 'all';
+
+  const [selectedCategory, setSelectedCategory] = useState(initialCategory);
+
   const filteredProducts =
     selectedCategory === 'all'
       ? products
@@ -30,38 +35,33 @@ const ProductsPage = () => {
 
       {/* 🔹 Content */}
       <div className='productsContent'>
-        {/* ✅ DEFAULT VIEW → GROUPED */}
-        {selectedCategory === 'all'
-          ? categories.map((cat) => {
-              const categoryProducts = products.filter(
-                (p) => p.category === cat.id,
-              );
+        {selectedCategory === 'all' ? (
+          categories.map((cat) => {
+            const categoryProducts = products.filter(
+              (p) => p.category === cat.id,
+            );
 
-              if (categoryProducts.length === 0) return null;
+            if (!categoryProducts.length) return null;
 
-              return (
-                <ProductSection
-                  key={cat.id}
-                  title={cat.title}
-                  subtitle={cat.subtitle}
-                  products={categoryProducts}
-                />
-              );
-            })
-          : (() => {
-              const selectedCat = categories.find(
-                (cat) => cat.id === selectedCategory,
-              );
-
-              return (
-                <ProductSection
-                  key={selectedCategory}
-                  title={selectedCat?.title}
-                  subtitle={selectedCat?.subtitle}
-                  products={filteredProducts}
-                />
-              );
-            })()}
+            return (
+              <ProductSection
+                key={cat.id}
+                title={cat.title}
+                subtitle={cat.subtitle}
+                products={categoryProducts}
+              />
+            );
+          })
+        ) : (
+          <ProductSection
+            key={selectedCategory} // 🔥 resets carousel
+            title={categories.find((c) => c.id === selectedCategory)?.title}
+            subtitle={
+              categories.find((c) => c.id === selectedCategory)?.subtitle
+            }
+            products={filteredProducts}
+          />
+        )}
       </div>
     </div>
   );

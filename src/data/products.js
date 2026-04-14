@@ -2,25 +2,32 @@ import s1 from '../assets/s1.png';
 import s2 from '../assets/s2.png';
 import s3 from '../assets/s3.png';
 import s4 from '../assets/s3.png';
+import makhanaImg from '../assets/p1.png';
+import proteinImg from '../assets/p2.png';
+import jowarImg from '../assets/p1.png';
 
+// ✅ Categories (now supports HomeProducts)
 export const categories = [
   {
     id: 'makhana',
     title: 'Flavoured Makhana',
     subtitle:
       'Roasted to perfection, seasoned with love. Your guilt-free snacking companion.',
+    image: makhanaImg,
+  },
+  {
+    id: 'protein',
+    title: 'Protein Products',
+    subtitle:
+      'Plant-based power with zero compromise. Fuel your body, naturally.',
+    image: proteinImg,
   },
   {
     id: 'jowar',
     title: 'Jowar Puffs',
     subtitle:
       'Made from wholesome jowar (sorghum), these airy puffs are a delicious way to enjoy light goodness.',
-  },
-  {
-    id: 'protein',
-    title: 'Clean Protein Powder',
-    subtitle:
-      'Plant-based protein with zero compromise. Fuel your body, naturally.',
+    image: jowarImg,
   },
 ];
 

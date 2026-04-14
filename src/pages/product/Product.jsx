@@ -6,8 +6,8 @@ import ProductsPage from './components/productsPage/ProductsPage';
 const Product = () => {
   return (
     <>
-          <ProductHero />
-          <ProductsPage/>
+      <ProductHero />
+      <ProductsPage />
       <HomeTesti />
       <HomeFAQ />
     </>
