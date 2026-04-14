@@ -64,7 +64,7 @@ const HomeTesti = () => {
   };
   return (
     <section className='HomeTesti'>
-      <div className='title'>WATCH CUSTOMERS CHOOSING EARTHLY GOOD</div>
+      <div className='title'>WATCH CUSTOMERS CHOOSING <br />EARTHLY GOOD</div>
       <div className='desc'>
         Premium quality snacks and supplements for your wellness journey
       </div>

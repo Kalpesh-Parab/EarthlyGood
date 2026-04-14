@@ -67,8 +67,8 @@ const HomeFAQ = () => {
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width='1920'
-          height='2441'
-          viewBox='0 0 1920 2441'
+          height='1505'
+          viewBox='0 0 1920 1505'
           fill='none'
         >
           <path
