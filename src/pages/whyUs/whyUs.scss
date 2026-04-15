@@ -1,0 +1,70 @@
+.WhyUs {
+  width: 100vw;
+  display: flex;
+  padding: 13vw 0 0 0;
+  flex-direction: column;
+
+  .first {
+    width: 100%;
+    padding: 0 4.375vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 3vw;
+  }
+  h1 {
+    margin: 0;
+    color: #d80303;
+    font-family: var(--font-primary);
+    font-size: 10.416666vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 84%; /* 168px */
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0;
+    color: #111;
+    text-align: left;
+    font-family: var(--font-secondary);
+    font-size: 2.0833vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 138%; /* 55.2px */
+  }
+
+  .second {
+    padding: 4.375vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3.05vw;
+
+    .spec {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      padding: 1.9vw 3vw;
+
+      .text{
+        width: 71.5%;
+      }
+      .icon{
+        width: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      h3 {
+        margin: 0;
+        color: #000;
+        font-family: var(--font-secondary);
+        font-size: 3.333vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 138%; /* 88.32px */
+      }
+    }
+  }
+}

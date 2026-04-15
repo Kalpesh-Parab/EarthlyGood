@@ -1,0 +1,140 @@
+.Contact {
+  display: flex;
+  flex-direction: column;
+  padding: 13vw 0;
+  gap: 2vw;
+
+  h1 {
+    padding: 0 4.375vw;
+
+    margin: 0;
+    color: #d80303;
+    font-family: var(--font-primary);
+    font-size: 10.416666vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 84%; /* 168px */
+    text-transform: uppercase;
+  }
+
+  p {
+    padding: 0 4.375vw;
+    margin: 0;
+    color: #111;
+    text-align: left;
+    width: 65%;
+    font-family: var(--font-secondary);
+    font-size: 2.0833vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 138%; /* 55.2px */
+  }
+
+  .infos {
+    padding: 0 4.375vw;
+    margin-top: 5vw;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 7vw;
+    align-items: center;
+
+    .info {
+      color: #1e1e1e;
+      font-family: var(--font-primary);
+      font-size: 2.5vw;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 84%; /* 40.32px */
+    }
+  }
+
+  h3 {
+    padding: 0 4.375vw;
+
+    color: #d80303;
+    font-family: var(--font-primary);
+    font-size: 5vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 84%; /* 80.64px */
+    text-transform: uppercase;
+  }
+  .contactForm {
+    padding: 0 4.375vw;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+
+    .formRow {
+      display: flex;
+      gap: 2vw;
+      width: 100%;
+    }
+
+    .formGroup {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 0.8vw;
+
+      label {
+        color: #111;
+        font-family: var(--font-secondary);
+        font-size: 2.0833vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 138%; /* 55.2px */
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 1.5vw;
+        color: #848484;
+        font-family: var(--font-secondary);
+        font-size: 1.66667vw;
+        font-style: normal;
+        font-weight: 400;
+        background-color: #fff;
+        outline: none;
+        border: none;
+        line-height: 138%; /* 44.16px */
+      }
+
+      textarea {
+        resize: none;
+      }
+    }
+
+    .full {
+      width: 100%;
+    }
+
+    .submitBtn {
+      width: fit-content;
+      margin-top: 1vw;
+      padding: 1.2vw 2.5vw;
+      background: #d80303;
+      color: #fff;
+      font-family: var(--font-primary);
+      font-size: 3.3333vw;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      box-shadow: -5px 5px 0 #000;
+
+      transition: all 0.2s ease;
+
+      &:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: -2px 2px 0 #000;
+      }
+    }
+  }
+}

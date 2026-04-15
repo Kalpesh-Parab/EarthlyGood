@@ -4,6 +4,8 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Product from './pages/product/Product';
 import About from './pages/about/About';
+import WhyUs from './pages/whyUs/WhyUs';
+import Contact from './pages/contact/Contact';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/products' element={<Product />} />
         <Route path='/about' element={<About />} />
+        <Route path='/why-us' element={<WhyUs />} />
+        <Route path='/contact' element={<Contact />} />
       </Routes>
 
       <Footer />
