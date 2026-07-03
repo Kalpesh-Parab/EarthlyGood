@@ -137,3 +137,49 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .HomeFAQ {
+    padding: 0;
+    flex-direction: column;
+    overflow: hidden;
+
+    .left,
+    .right {
+      width: 100%;
+    }
+
+    .left {
+      padding: 10vw 6vw;
+      gap: 4vw;
+
+      .title {
+        font-size: 12.5vw;
+      }
+
+      .faqList {
+        gap: 5vw;
+      }
+
+      .faqItem {
+        padding: 3vw;
+
+        .question {
+          font-size: 4vw;
+        }
+
+        .icon {
+          width: 6vw;
+          font-size: 4vw;
+        }
+
+
+        &.active {
+          .answer {
+            font-size: 3vw;
+          }
+        }
+      }
+    }
+  }
+}

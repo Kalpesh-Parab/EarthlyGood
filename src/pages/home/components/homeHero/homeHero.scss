@@ -93,3 +93,37 @@
   }
 }
 }
+
+@media (max-width: 480px) {
+  .HomeHero{
+    margin-top: 20vh; 
+    height: 80vh;
+    
+  .content {
+    height: 100%;
+    gap: 6vw;
+
+    .title {
+      font-size: 15vw;
+    }
+
+    .subTitle {
+      width: 60%;
+      font-size: 4vw;
+    }
+
+    .button {
+      padding: 3vw 5vw;
+      border-radius: 6vw;
+      font-size: 3vw;
+    }
+  }
+  .strip {
+    padding: 3vw 0;
+
+    .text {
+      font-size: 6vw;
+    }
+  }
+  }
+}

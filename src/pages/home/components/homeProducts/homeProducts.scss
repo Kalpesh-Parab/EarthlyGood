@@ -33,7 +33,7 @@
       cursor: pointer;
     }
 
-    :hover{
+    :hover {
       text-decoration: underline;
     }
   }
@@ -129,6 +129,56 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-image: url('../../../../assets/pbg.png');
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .HomeProducts {
+    gap: 6vw;
+    padding: 6vw 3.541666vw;
+    position: relative;
+    z-index: 5;
+    .tiles {
+      width: 90%;
+      gap: 3vw;
+      .tile {
+        font-size: 3vw;
+        width: 100%;
+      }
+    }
+    .productsInfo {
+      width: 90%;
+      gap: 10vw;
+      .card {
+        gap: 4vw;
+        flex-direction: column;
+        height: auto;
+        .left,
+        .right {
+          width: 100%;
+        }
+
+        .left {
+          h3 {
+            width: 90%;
+            font-size: 10vw;
+          }
+
+          p {
+            font-size: 4vw;
+          }
+
+          button {
+            border-radius: 5vw;
+            padding: 3vw 4vw;
+            font-size: 3vw;
+          }
+        }
+        &:nth-child(even) {
+          flex-direction: column;
+        }
       }
     }
   }

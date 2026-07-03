@@ -113,3 +113,70 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .HomeWhy {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    padding: 10vw 0;
+    overflow: hidden;
+
+    .shape {
+      top: -73%;
+      left: -85%;
+    }
+
+    .mcut2 {
+      z-index: 3;
+      top: -9vh;
+      width: 40vw;
+    }
+    .content {
+      margin-top: 12vw;
+      gap: 5vw;
+      padding: 10vw 3.541666vw;
+      justify-content: center;
+      align-items: center;
+
+      .title {
+        width: 80%;
+        font-size: 12vw;
+      }
+
+      .desc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        font-size: 4vw;
+      }
+
+      .cards {
+        width: 90%;
+        overflow: hidden;
+        height: auto;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 5vw;
+
+        .card {
+          width: 46%;
+          height: 70vw;
+
+          .number {
+            font-size: 30vw;
+          }
+
+          h3 {
+            font-size: 6vw;
+          }
+
+          p {
+            font-size: 4.5vw;
+          }
+        }
+      }
+    }
+  }
+}

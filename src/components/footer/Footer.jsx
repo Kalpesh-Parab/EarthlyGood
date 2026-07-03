@@ -17,6 +17,10 @@ const Footer = () => {
       <div className='bottom'>
         <div className='bigLogo'>
           <img src={logo} alt='' />
+          <div className='pre2'>
+            Premium roasted makhana & clean protein made for modern living.
+            Pure. Good. Simple.
+          </div>
         </div>
         <div className='midFooter'>
           <div className='pre'>

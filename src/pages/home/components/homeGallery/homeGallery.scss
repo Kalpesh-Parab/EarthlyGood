@@ -30,3 +30,23 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .HomeGallery {
+    width: 100%;
+
+    .photos {
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .strip {
+      .text {
+        font-size: 5vw;
+      }
+    }
+  }
+}

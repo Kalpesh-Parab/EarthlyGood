@@ -56,6 +56,17 @@
         height: auto;
         object-fit: cover;
       }
+
+      .pre2 {
+        color: #f5ead6;
+        font-family: var(--font-secondary);
+        font-size: 1.125vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 94.492%; /* 18.898px */
+        text-transform: uppercase;
+        display: none;
+      }
     }
 
     .midFooter {
@@ -183,6 +194,112 @@
     }
     to {
       transform: translateX(-50%);
+    }
+  }
+}
+
+.Footer {
+  @media (max-width: 480px) {
+    .makhana {
+      width: 30vw; // Scale up the floating makhana image for smaller screens
+      top: -30%;
+    }
+
+    .strip {
+      padding: 4vw 0; // Add thicker padding to the moving banner strip
+
+      .text {
+        font-size: 5vw; // Scale up marquee text size
+      }
+    }
+
+    .bottom {
+      flex-direction: column; // Stack elements vertically (Logo/Mid section/Quick links)
+      align-items: flex-start;
+      gap: 8vw;
+      padding: 10vw 6vw 6vw 6vw; // Generous mobile padding
+
+      // Container holding the Logo and the Description text side by side on mobile
+      .bigLogo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 5vw;
+
+        .pre2 {
+          display: block; // Show the pre2 text on mobile
+          font-size: 4vw; // Scale down the font size for mobile readability
+          line-height: 120%;
+          width: 60%; // Adjust width to fit alongside the logo
+        }
+        img {
+          width: 30% !important; // Keeps the logo proportionally sized on the left
+        }
+      }
+
+      .midFooter {
+        width: 100%;
+        padding-left: 0;
+        order: 3; // Ensures midFooter is below the logo and above the links
+        gap: 8vw;
+
+        // This targets the premium text description.
+        // We nest it or style it to align alongside the logo if desired,
+        // or let it occupy the top horizontal layout.
+        .pre {
+          display: none; // Hide the pre text on mobile to reduce clutter
+          font-size: 5vw; // Scales font cleanly relative to viewport width
+          line-height: 120%;
+          width: 70%; // Leaves space next to the logo container if rendered next to it
+        }
+
+        .newsletter {
+          font-size: 4vw;
+          gap: 3vw;
+
+          .input {
+            height: 12vw; // Thicker, easy-to-tap mobile input bar
+            box-shadow: -4px 4px 0px 0px #000; // Scaled down drop shadow
+
+            input {
+              font-size: 3.5vw;
+              padding: 2vw 4vw;
+            }
+
+            button {
+              width: 35%;
+              font-size: 3.5vw;
+              padding: 2vw;
+            }
+          }
+        }
+
+        .copy {
+          font-size: 2vw;
+          text-align: center;
+          width: 100%;
+          margin-top: 4vw;
+          order: 4; // Ensures copyright line drops down to the absolute bottom
+        }
+      }
+
+      .linksFooter {
+        order: 2; // Ensures links are above the newsletter/copyright per image_fa3209.png
+        width: 100%;
+        padding-left: 0;
+        gap: 4vw;
+        font-size: 4.5vw;
+
+        ul {
+          flex-direction: row; // Flips layout from a vertical list to a horizontal row
+          flex-wrap: wrap; // Wraps cleanly if link names are long
+          gap: 6vw;
+
+          li {
+            font-size: 4vw;
+          }
+        }
+      }
     }
   }
 }

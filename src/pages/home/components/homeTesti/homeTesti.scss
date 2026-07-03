@@ -126,3 +126,73 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .HomeTesti {
+    padding: 10vw 4vw;
+    gap: 5vw;
+
+    .title {
+      width: 100%;
+      font-size: 12.5vw;
+    }
+
+    .desc {
+      width: 80%;
+      font-size: 4.5vw;
+    }
+
+    .testimonials {
+      padding: 5vw 2.5vw;
+      gap: 5vw;
+
+      .testimonial {
+        width: 80vw;
+        gap: 3vw;
+        padding: 2vw;
+
+        .testTop {
+          align-items: center;
+          gap: 1vw;
+
+          .testTopLeft {
+            padding: 0;
+            align-items: center;
+            text-align: center;
+
+            .stars{
+              height: 6vw;
+              svg{
+                width: 4vw;
+              }
+            }
+            .name,
+            .location {
+              font-size: 8vw;
+            }
+          }
+
+          .testTopRight {
+            width: 35%;
+          }
+        }
+
+        .review {
+          letter-spacing: .1vw;
+          font-size: 3vw;
+        }
+      }
+    }
+    .tright {
+      gap: 5vw;
+
+      .button {
+        width: 10vw;
+
+        svg {
+          width: 4vw;
+        }
+      }
+    }
+  }
+}

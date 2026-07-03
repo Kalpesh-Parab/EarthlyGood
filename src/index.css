@@ -28,3 +28,9 @@ body {
 &::-webkit-scrollbar{
   display: none;
 }
+
+@media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+}

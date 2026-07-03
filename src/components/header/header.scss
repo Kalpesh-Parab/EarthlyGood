@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   padding: 2.34375vw 1.875vw;
-  overflow: hidden;
+  overflow: visible; // Changed from hidden to handle open dropdown menus smoothly
   position: fixed;
   top: 0;
   left: 0;
@@ -28,6 +28,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 10;
 
     .headerLeft {
       width: 60%;
@@ -41,6 +43,7 @@
       .logo {
         width: 7.291666vw;
         aspect-ratio: 71/96;
+        cursor: pointer;
 
         img {
           width: 100%;
@@ -78,6 +81,7 @@
         }
       }
     }
+
     .headerRight {
       width: 25%;
       display: flex;
@@ -89,7 +93,6 @@
         align-items: center;
         gap: 0.8vw;
         padding: 0.5vw 1vw;
-
         border-radius: 5vw;
         border: 3px solid #d80303;
         background: #fff;
@@ -113,6 +116,183 @@
           &::placeholder {
             color: #d80303;
             opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  // Mobile specific wrappers hidden on desktop
+  .mobile-only {
+    display: none !important;
+  }
+
+  .mobileMenuDrawer {
+    display: none;
+  }
+}
+
+/* Mobile Breakpoint styles matching your exact reference requirements */
+@media (max-width: 480px) {
+  .Header {
+    padding: 8vw 3vw;
+
+    .desktop-only {
+      display: none !important;
+    }
+
+    .mobile-only {
+      display: flex !important;
+    }
+
+    .container {
+      height: 10.43478260869565vw;
+      border-radius: 35px; // Matches the high border-radius container from design
+      padding: 0 1vw;
+
+
+      .headerLeft {
+        width: auto;
+
+        .logo {
+          width: 18vw;
+          transform: translateY(3px); // Let the brand patch pop out beautifully
+        }
+      }
+    }
+
+    .mobileActions {
+      display: flex;
+      align-items: center;
+      padding: 2vw;
+      gap: 12px;
+
+      // Pill search button on the left of menu
+      .searchBoxMini {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 16px;
+        border: 2px solid #d80303;
+        border-radius: 20px;
+        color: #d80303;
+        font-weight: 700;
+        font-size: 3vw;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        img {
+          width: 4vw;
+          height: 4vw;
+        }
+      }
+
+      // Red Hamburger button styling
+      .hamburger {
+        width: 11vw;
+        height: 11vw;
+        background-color: #d80303;
+        border: none;
+        border-radius: 12px; // Rounded corner box
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+        padding: 0;
+
+        .bar {
+          width: 6vw;
+          height: .7vw;
+          background-color: #fff;
+          border-radius: 2px;
+          transition: all 0.3s ease;
+        }
+
+        // Animated close state transformation
+        &.open {
+          .bar:nth-child(1) {
+            transform: translateY(1.4vw) rotate(45deg);
+          }
+          .bar:nth-child(2) {
+            opacity: 0;
+          }
+          .bar:nth-child(3) {
+            transform: translateY(-1.6vw) rotate(-45deg);
+          }
+        }
+      }
+    }
+
+    // Dropdown mobile container drawer
+    .mobileMenuDrawer {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: calc(100% - 10px);
+      left: 20px;
+      right: 20px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+      padding: 20px;
+      gap: 20px;
+      transform: translateY(-20px);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      z-index: 5;
+
+      &.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .mobileSearchBox {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 15px;
+        border: 2px solid #d80303;
+        border-radius: 25px;
+
+        img {
+          width: 18px;
+          height: 18px;
+        }
+        input {
+          width: 100%;
+          border: none;
+          outline: none;
+          color: #d80303;
+          font-weight: 600;
+          text-transform: uppercase;
+          &::placeholder {
+            color: #d80303;
+          }
+        }
+      }
+
+      .mobileLinks {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .mobileLink {
+          color: #000;
+          font-size: 16px;
+          font-weight: 600;
+          text-transform: uppercase;
+          padding: 12px 15px;
+          border-radius: 8px;
+          transition: all 0.2s ease;
+
+          &.active,
+          &:hover {
+            background: #d80303;
+            color: #fff;
           }
         }
       }

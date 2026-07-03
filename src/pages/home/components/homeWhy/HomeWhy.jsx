@@ -21,10 +21,13 @@ const HomeWhy = () => {
       desc: 'Preserving nutrients while delivering perfect crunch',
     },
   ];
+
   return (
     <section className='HomeWhy'>
       <div className='shape'>
+        {/* Desktop SVG */}
         <svg
+          className='desktop-svg'
           xmlns='http://www.w3.org/2000/svg'
           width='1920'
           height='2441'
@@ -36,21 +39,23 @@ const HomeWhy = () => {
             fill='#D70303'
           />
         </svg>
-      </div>
-      {/* <div className='shape2'>
+
+        {/* Mobile SVG */}
         <svg
+          className='mobile-svg'
           xmlns='http://www.w3.org/2000/svg'
-          width='1920'
-          height='2141'
-          viewBox='0 0 1920 2141'
+          width='375'
+          height='1395'
+          viewBox='0 0 375 1395'
           fill='none'
         >
           <path
-            d='M1380.01 587.556C1804.18 587.556 1949.08 378.964 1996.47 270.851L2124.08 202.789L2124.08 2140.34H-104.945V0H178.295C669.975 0 703.956 587.556 1380.01 587.556Z'
-            fill='white'
+            d='M155.046 407.52C70.9395 383.544 30.83 216.522 19.8364 154.752L-9.77148 115.864V1394.29H507.379V0H441.666C327.592 0 310.854 451.935 155.046 407.52Z'
+            fill='#D70303'
           />
         </svg>
-      </div> */}
+      </div>
+
       <img src={mcut2} className='mcut2' alt='' />
       <img src={mcut3} className='mcut3' alt='' />
       <div className='content'>

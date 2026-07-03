@@ -202,3 +202,95 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .HomeShop {
+    overflow: hidden;
+
+    .content {
+      padding: 10vw 5vw;
+      gap: 5vw;
+      .top {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+
+        .tleft {
+          gap: 3vw;
+          .title {
+            font-size: 12.5vw;
+          }
+          .desc {
+            font-size: 4.1667vw;
+          }
+        }
+
+        .tright {
+          display: none;
+        }
+      }
+
+      .products {
+        display: flex;
+        overflow: hidden;
+        flex-wrap: wrap;
+        padding: 0;
+        gap: 3vw;
+
+        .product {
+          margin-top: 2vw;
+          width: 48%;
+          padding: 3vw;
+          gap: 3vw;
+
+          img {
+            height: 40vw;
+            width: 100%;
+          }
+
+          .rating {
+              font-size: 3.025vw;
+
+            svg {
+              width: 3vw;
+            }
+            .reviews {
+              padding-left: 1vw;
+              font-size: 3.025vw;
+            }
+          }
+
+          .name {
+            font-size: 4vw;
+          }
+
+          .pricing {
+            gap: 2vw;
+
+            .strikedPrice {
+              font-size: 2.5vw;
+            }
+
+            .price {
+              font-size: 5vw;
+            }
+          }
+
+          .button {
+            font-size: 3.05vw;
+            padding: 3vw;
+          }
+        }
+      }
+
+      .bottom {
+        margin-top: 6vw;
+
+        .button {
+          font-size: 4.5vw;
+          padding: 2.5vw 8vw;
+        }
+      }
+    }
+  }
+}
