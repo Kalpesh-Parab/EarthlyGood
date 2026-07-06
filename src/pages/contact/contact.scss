@@ -139,3 +139,61 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .Contact {
+    padding-top: 27vw;
+
+    h1 {
+      font-size: 12vw;
+    }
+
+    p {
+      width: 100%;
+      font-size: 4vw;
+    }
+
+    .infos {
+      flex-direction: column;
+      align-items: start;
+
+      .info {
+        font-size: 5vw;
+        letter-spacing: 0.1vw;
+      }
+    }
+
+    h3 {
+      font-size: 8vw;
+    }
+
+    .contactForm {
+      gap: 5vw;
+      .formRow {
+        flex-direction: column;
+        gap: 4vw;
+      }
+
+      /* 👇 Moved outside of .formRow so it targets the Message field too */
+      .formGroup {
+        width: 100%;
+        gap: 1vw;
+
+        label {
+          font-size: 4vw;
+        }
+
+        input,
+        textarea {
+          font-size: 4vw;
+        }
+      }
+
+      /* 👇 Moved inside the media query and .contactForm */
+      .submitBtn {
+        font-size: 6vw;
+        padding: 3vw 6vw;
+      }
+    }
+  }
+}

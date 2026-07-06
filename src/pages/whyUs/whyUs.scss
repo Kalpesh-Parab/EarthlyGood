@@ -1,7 +1,7 @@
 .WhyUs {
   width: 100vw;
   display: flex;
-  padding: 13vw 0 0 0;
+  padding-top: 13vw;
   flex-direction: column;
 
   .first {
@@ -47,10 +47,10 @@
       background-color: #fff;
       padding: 1.9vw 3vw;
 
-      .text{
+      .text {
         width: 71.5%;
       }
-      .icon{
+      .icon {
         width: 15%;
         display: flex;
         align-items: center;
@@ -64,6 +64,44 @@
         font-style: normal;
         font-weight: 500;
         line-height: 138%; /* 88.32px */
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .WhyUs {
+    padding-top: 28vw;
+
+    .first {
+      h1 {
+        font-size: 12vw;
+      }
+      p {
+        font-size: 4vw;
+      }
+    }
+
+    .second {
+      gap: 6vw;
+      .spec {
+        padding: 4vw;
+        .text {
+          h3 {
+            font-size: 6vw;
+          }
+          p {
+            font-size: 4vw;
+          }
+        }
+
+        .icon{
+          svg{
+            width: 14vw;
+            height: 14vw;
+          }
+
+        }
       }
     }
   }

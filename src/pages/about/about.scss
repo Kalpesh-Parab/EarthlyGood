@@ -1,9 +1,9 @@
 .About {
   width: 100vw;
   display: flex;
-  padding: 13vw 0 0 0;
-//   justify-content: center;
-//   align-items: center;
+  padding-top: 13vw;
+  //   justify-content: center;
+  //   align-items: center;
   flex-direction: column;
 
   .first {
@@ -16,7 +16,7 @@
 
     .jowar {
       position: absolute;
-      right: -.375vw;
+      right: -0.375vw;
       top: -45%;
     }
   }
@@ -76,7 +76,6 @@
 
     .pleft {
       color: #111;
-      text-align: left;
       width: 65%;
       font-family: var(--font-secondary);
       font-size: 2.0833vw;
@@ -97,7 +96,7 @@
     img {
       bottom: -120%;
       position: absolute;
-      right: -.375vw;
+      right: -0.375vw;
       width: 30vw;
     }
 
@@ -154,6 +153,96 @@
 
     img {
       width: 40%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .About {
+    overflow: hidden;
+    padding-top: 27vw;
+
+    .first {
+      h1 {
+        font-size: 12vw;
+      }
+      p {
+        width: 100%;
+        font-size: 4vw;
+      }
+
+      .jowar {
+        width: 60vw;
+        height: 70vw;
+        top: 85%;
+        right: -3%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .second {
+      h3 {
+        font-size: 8vw;
+      }
+      p {
+        font-size: 4vw;
+      }
+    }
+
+    .third {
+      margin: 5vw 0;
+      align-items: flex-start;
+      flex-direction: column;
+      img {
+        width: 100%;
+      }
+
+      .pleft {
+        text-align: left;
+        font-size: 4vw;
+      }
+    }
+
+    .fourth {
+      margin: 4vw 0;
+      h3 {
+        font-size: 8vw;
+      }
+      p {
+        width: 90%;
+        font-size: 4vw;
+      }
+      img {
+        right: -0.8vw;
+        width: 35vw;
+        bottom: -55%;
+
+      }
+
+      .promises {
+        gap: 4vw;
+        .promise {
+          padding: 4vw;
+          width: 100%;
+          font-size: 3.5vw;
+        }
+      }
+    }
+
+    .fifth{
+      margin: 6vw 0;
+      h3{
+        font-size: 8vw;
+      }
+      p{
+        width: 75%;
+        font-size: 4vw;
+      }
     }
   }
 }
