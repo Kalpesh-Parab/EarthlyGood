@@ -73,5 +73,65 @@
       transform: translateY(5px);
       box-shadow: -2px 2px 2px #000;
     }
+
+    &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  .mobileArrows {
+    display: none;
+  }
+}
+
+/* 🔥 Mobile Layout Adjustments */
+@media (max-width: 480px) {
+  .ProductSection {
+    padding: 8vw 2vw;
+
+    .sectionHeader {
+      h2 {
+        font-size: 8vw;
+      }
+      p {
+        font-size: 4vw;
+        width: 95%;
+      }
+    }
+
+    .sectionBody {
+      margin-top: 5vw;
+    }
+
+    .sectionGrid {
+      gap: 3vw; 
+    }
+
+    .mobileArrows {
+      display: flex;
+      justify-content: center;
+      gap: 6vw;
+      margin-top: 6vw;
+      width: 100%;
+
+      .button {
+        position: relative; /* Overrides absolute positioning */
+        width: 9vw;
+        left: unset;
+        right: unset;
+        box-shadow: -4px 4px 0px #000;
+        
+        svg {
+          width: 50%;
+          height: auto;
+        }
+
+        &:hover {
+          transform: translateY(3px);
+          box-shadow: -2px 2px 2px #000;
+        }
+      }
+    }
   }
 }

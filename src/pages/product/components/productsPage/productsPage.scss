@@ -34,3 +34,14 @@
 
   
 }
+
+@media (max-width: 480px) {
+  .ProductsPage {
+
+    .productsHeader {
+      h1 {
+        font-size: 9vw;
+      }
+    }
+  }
+}

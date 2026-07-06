@@ -1,115 +1,34 @@
-import './homeShop.scss';
 import { useRef } from 'react';
-import s1 from '../../../../assets/s1.png';
-import s2 from '../../../../assets/s2.png';
-import s3 from '../../../../assets/s3.png';
-import s4 from '../../../../assets/s4.png';
 import { useNavigate } from 'react-router-dom';
+import { products } from '../../../../data/products'; // 🔥 Adjust this import path as needed
+
+import './homeShop.scss';
+
 const HomeShop = () => {
-  const data = [
-    {
-      photo: s1,
-      name: '100GM MAKHANA PACKAGE - pack of 1',
-      price: '₹ 200',
-      strikedPrice: '₹ 300',
-      rating: 5,
-      reviews: 78,
-    },
-    {
-      photo: s2,
-      name: '100GM MAKHANA PACKAGE - pack of 1',
-      price: '₹ 200',
-      strikedPrice: '₹ 300',
-      rating: 5,
-      reviews: 78,
-    },
-    {
-      photo: s3,
-      name: '100GM MAKHANA PACKAGE - pack of 1',
-      price: '₹ 200',
-      strikedPrice: '₹ 300',
-      rating: 5,
-      reviews: 78,
-    },
-    {
-      photo: s4,
-      name: '100GM MAKHANA PACKAGE - pack of 1',
-      price: '₹ 200',
-      strikedPrice: '₹ 300',
-      rating: 5,
-      reviews: 78,
-    },
-    {
-      photo: s1,
-      name: '100GM MAKHANA PACKAGE - pack of 1',
-      price: '₹ 200',
-      strikedPrice: '₹ 300',
-      rating: 5,
-      reviews: 78,
-    },
-    {
-      photo: s1,
-      name: '100GM MAKHANA PACKAGE - pack of 1',
-      price: '₹ 200',
-      strikedPrice: '₹ 300',
-      rating: 5,
-      reviews: 78,
-    },
-    {
-      photo: s2,
-      name: '100GM MAKHANA PACKAGE - pack of 1',
-      price: '₹ 200',
-      strikedPrice: '₹ 300',
-      rating: 5,
-      reviews: 78,
-    },
-    {
-      photo: s3,
-      name: '100GM MAKHANA PACKAGE - pack of 1',
-      price: '₹ 200',
-      strikedPrice: '₹ 300',
-      rating: 5,
-      reviews: 78,
-    },
-    {
-      photo: s4,
-      name: '100GM MAKHANA PACKAGE - pack of 1',
-      price: '₹ 200',
-      strikedPrice: '₹ 300',
-      rating: 5,
-      reviews: 78,
-    },
-    {
-      photo: s1,
-      name: '100GM MAKHANA PACKAGE - pack of 1',
-      price: '₹ 200',
-      strikedPrice: '₹ 300',
-      rating: 5,
-      reviews: 78,
-    },
-  ];
-
   const cardsRef = useRef(null);
-
-const handleNext = () => {
-  if (cardsRef.current) {
-    cardsRef.current.scrollBy({
-      left: cardsRef.current.offsetWidth * 0.3,
-      behavior: 'smooth',
-    });
-  }
-};
-
-const handlePrev = () => {
-  if (cardsRef.current) {
-    cardsRef.current.scrollBy({
-      left: -cardsRef.current.offsetWidth * .3,
-      behavior: 'smooth',
-    });
-  }
-  };
-  
   const navigate = useNavigate();
+
+  const handleNext = () => {
+    if (cardsRef.current) {
+      cardsRef.current.scrollBy({
+        left: cardsRef.current.offsetWidth * 0.3,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  const handlePrev = () => {
+    if (cardsRef.current) {
+      cardsRef.current.scrollBy({
+        left: -cardsRef.current.offsetWidth * 0.3,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  // 🔥 Optional: Filter only featured products if you don't want to show the entire list
+  const displayProducts = products.filter((product) => product.isFeatured);
+
   return (
     <section className='HomeShop'>
       <div className='shape2'>
@@ -165,12 +84,14 @@ const handlePrev = () => {
             </div>
           </div>
         </div>
-          <div className='products' ref={cardsRef}>
-          {data.map((item, index) => (
-            <div className='product' key={index}>
-              <img src={item.photo} alt='' />
+        <div className='products' ref={cardsRef}>
+          {displayProducts.map((item) => (
+            <div className='product' key={item.id}>
+              {/* 🔥 Using item.images[0] based on the data schema */}
+              <img src={item.images[0]} alt={item.name} />
               <div className='rating'>
-                {[...Array(item.rating)].map((_, i) => (
+                {/* 🔥 Math.floor rounds down 4.5 to 4 whole stars for mapping purposes */}
+                {[...Array(Math.floor(item.reviews.rating))].map((_, i) => (
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='24'
@@ -185,14 +106,23 @@ const handlePrev = () => {
                     />
                   </svg>
                 ))}{' '}
-                | <div className='reviews'>{item.reviews} reviews</div>
+                | {/* ✅ Point to the specific number inside the object */}
+                <div className='reviews'>{item.reviews.numReviews} reviews</div>
               </div>
               <div className='name'>{item.name}</div>
               <div className='pricing'>
-                <div className='strikedPrice'>{item.strikedPrice}</div>
-                <div className='price'>{item.price}/-</div>
+                {/* 🔥 Formatting the originalPrice and price with the currency symbol */}
+                <div className='strikedPrice'>
+                  ₹ {item.pricing.originalPrice}
+                </div>
+                <div className='price'>₹ {item.pricing.price}/-</div>
               </div>
-              <div className='button'>View Product</div>
+              <div
+                className='button'
+                onClick={() => navigate(`/products/${item.id}`)}
+              >
+                View Product
+              </div>
             </div>
           ))}
         </div>

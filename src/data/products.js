@@ -33,7 +33,7 @@ export const categories = [
 
 export const products = [
   {
-    id: 'makhana-100g-pack1',
+    id: 'makhana-100g-pack-a',
     name: '100GM Makhana Package - Pack of 1',
     category: 'makhana',
 
@@ -80,11 +80,15 @@ export const products = [
     images: [s4, s2],
 
     tags: ['healthy', 'snack', 'roasted'],
+    reviews: {
+      rating: 4.5,
+      numReviews: 120,
+    },
     isFeatured: true,
   },
 
   {
-    id: 'jowar-100g-pack1',
+    id: 'jowar-100g-pack-a',
     name: '100GM Jowar Puffs - Pack of 1',
     category: 'jowar',
 
@@ -119,11 +123,15 @@ export const products = [
     images: [s2, s4],
 
     tags: ['light', 'healthy'],
+    reviews: {
+      rating: 4.0,
+      numReviews: 85,
+    },
     isFeatured: false,
   },
 
   {
-    id: 'protein-500g-pack',
+    id: 'protein-500g-pack-a',
     name: 'Clean Protein Powder - 500GM',
     category: 'protein',
 
@@ -163,10 +171,14 @@ export const products = [
     images: [s3, s4],
 
     tags: ['fitness', 'protein'],
+    reviews: {
+      rating: 4.8,
+      numReviews: 210,
+    },
     isFeatured: true,
   },
   {
-    id: 'makhana-100g-pack1',
+    id: 'makhana-100g-pack-b',
     name: '100GM Makhana Package - Pack of 1',
     category: 'makhana',
 
@@ -213,11 +225,15 @@ export const products = [
     images: [s3, s2],
 
     tags: ['healthy', 'snack', 'roasted'],
+    reviews: {
+      rating: 4.2,
+      numReviews: 95,
+    },
     isFeatured: true,
   },
 
   {
-    id: 'jowar-100g-pack1',
+    id: 'jowar-100g-pack-b',
     name: '100GM Jowar Puffs - Pack of 1',
     category: 'jowar',
 
@@ -252,11 +268,15 @@ export const products = [
     images: [s3, s4],
 
     tags: ['light', 'healthy'],
+    reviews: {
+      rating: 3.9,
+      numReviews: 70,
+    },
     isFeatured: false,
   },
 
   {
-    id: 'protein-500g-pack',
+    id: 'protein-500g-pack-b',
     name: 'Clean Protein Powder - 500GM',
     category: 'protein',
 
@@ -296,10 +316,14 @@ export const products = [
     images: [s1, s4],
 
     tags: ['fitness', 'protein'],
+    reviews: {
+      rating: 4.7,
+      numReviews: 180,
+    },
     isFeatured: true,
   },
   {
-    id: 'makhana-100g-pack1',
+    id: 'makhana-100g-pack-c',
     name: '100GM Makhana Package - Pack of 1',
     category: 'makhana',
 
@@ -346,11 +370,15 @@ export const products = [
     images: [s1, s2],
 
     tags: ['healthy', 'snack', 'roasted'],
+    reviews: {
+      rating: 4.6,
+      numReviews: 110,
+    },
     isFeatured: true,
   },
 
   {
-    id: 'jowar-100g-pack1',
+    id: 'jowar-100g-pack-c',
     name: '100GM Jowar Puffs - Pack of 1',
     category: 'jowar',
 
@@ -385,11 +413,15 @@ export const products = [
     images: [s3, s4],
 
     tags: ['light', 'healthy'],
+    reviews: {
+      rating: 4.1,
+      numReviews: 80,
+    },
     isFeatured: false,
   },
 
   {
-    id: 'protein-500g-pack',
+    id: 'protein-500g-pack-c',
     name: 'Clean Protein Powder - 500GM',
     category: 'protein',
 
@@ -429,10 +461,14 @@ export const products = [
     images: [s1, s4],
 
     tags: ['fitness', 'protein'],
+    reviews: {
+      rating: 4.9,
+      numReviews: 230,
+    },
     isFeatured: true,
   },
   {
-    id: 'makhana-100g-pack1',
+    id: 'makhana-100g-pack-d',
     name: '100GM Makhana Package - Pack of 1',
     category: 'makhana',
 
@@ -479,11 +515,15 @@ export const products = [
     images: [s1, s2],
 
     tags: ['healthy', 'snack', 'roasted'],
+    reviews: {
+      rating: 4.3,
+      numReviews: 100,
+    },
     isFeatured: true,
   },
 
   {
-    id: 'jowar-100g-pack1',
+    id: 'jowar-100g-pack-d',
     name: '100GM Jowar Puffs - Pack of 1',
     category: 'jowar',
 
@@ -518,11 +558,15 @@ export const products = [
     images: [s1, s4],
 
     tags: ['light', 'healthy'],
+    reviews: {
+      rating: 3.8,
+      numReviews: 65,
+    },
     isFeatured: false,
   },
 
   {
-    id: 'protein-500g-pack',
+    id: 'protein-500g-pack-d',
     name: 'Clean Protein Powder - 500GM',
     category: 'protein',
 
@@ -562,10 +606,14 @@ export const products = [
     images: [s1, s4],
 
     tags: ['fitness', 'protein'],
+    reviews: {
+      rating: 4.6,
+      numReviews: 190,
+    },
     isFeatured: true,
   },
   {
-    id: 'makhana-100g-pack1',
+    id: 'makhana-100g-pack-e',
     name: '100GM Makhana Package - Pack of 1',
     category: 'makhana',
 
@@ -612,11 +660,15 @@ export const products = [
     images: [s2, s2],
 
     tags: ['healthy', 'snack', 'roasted'],
+    reviews: {
+      rating: 4.5,
+      numReviews: 120,
+    },
     isFeatured: true,
   },
 
   {
-    id: 'jowar-100g-pack1',
+    id: 'jowar-100g-pack-e',
     name: '100GM Jowar Puffs - Pack of 1',
     category: 'jowar',
 
@@ -651,11 +703,15 @@ export const products = [
     images: [s3, s4],
 
     tags: ['light', 'healthy'],
+    reviews: {
+      rating: 4.0,
+      numReviews: 85,
+    },
     isFeatured: false,
   },
 
   {
-    id: 'protein-500g-pack',
+    id: 'protein-500g-pack-e',
     name: 'Clean Protein Powder - 500GM',
     category: 'protein',
 
@@ -695,6 +751,10 @@ export const products = [
     images: [s2, s4],
 
     tags: ['fitness', 'protein'],
+    reviews: {
+      rating: 4.8,
+      numReviews: 210,
+    },
     isFeatured: true,
   },
 ];

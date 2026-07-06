@@ -55,3 +55,24 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .ProductHero {
+    margin-top: 20vw;
+    height: 55vw;
+    h1 {
+      font-size: 9.5vw;
+    }
+
+    h2 {
+      font-size: 9.5vw;
+    }
+    .strip {
+      padding: 4vw 0; // Add thicker padding to the moving banner strip
+
+      .text {
+        font-size: 5vw; // Scale up marquee text size
+      }
+    }
+  }
+}
