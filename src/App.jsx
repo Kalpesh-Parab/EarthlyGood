@@ -7,10 +7,12 @@ import Single from './pages/single/Single'; // 🔥 Import your Single page here
 import About from './pages/about/About';
 import WhyUs from './pages/whyUs/WhyUs';
 import Contact from './pages/contact/Contact';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Header />
 
       <Routes>
